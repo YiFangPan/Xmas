@@ -44,9 +44,19 @@ Maybe you need to think more...
   * Tell me today is Xmas or isn't Xmas
   * If today is Xmas, I want to see "Xmas"
   * If today isn't Xmas, I want to see "Today is not Xmas"
+
+***
+
+### Part 3
+
+#### Modify your code for meet user requirement and add unit test to verify user requirement
+  
+#### Restriction
+  * No Public
+  * No Parameter
+  * No Constructor
+  * No Field
+  * No Property
   
   
-  
-  
- 
  
