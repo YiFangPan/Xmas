@@ -5,7 +5,7 @@ How to handle feature change and add unit test in original function
 
 ***
 
-### Part 1
+### Practice - Part 1
 
 #### User Requirement 
  * Tell me today is Xmas or isn't Xmas
@@ -23,7 +23,7 @@ Maybe you need to think more...
   
 ***
 
-### Part 2
+### Practice - Part 2
 
 #### Write your legacy code and add unit test to verify user requirement
   
@@ -48,7 +48,7 @@ Maybe you need to think more...
 
 ***
 
-### Part 3
+### Practice - Part 3
 
 #### Modify your code for meet user requirement and add unit test to verify user requirement
   
