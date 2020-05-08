@@ -7,6 +7,8 @@ How to handle feature change and add unit test in original function
 
 ### Practice - Part 1
 
+#### Write your legacy code for meet user requirement
+
 #### User Requirement 
  * Tell me today is Xmas or isn't Xmas
 
