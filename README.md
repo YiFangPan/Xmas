@@ -25,7 +25,7 @@ Maybe you need to think more...
 
 ### Part 2
 
-#### Start write your own legacy code
+#### Start write your own legacy code and add unit test to verify user requirement
   
 #### Restriction
   1. Create Public Method
