@@ -5,38 +5,45 @@ namespace Xmas.UnitTests
 {
     public class HolidayTests
     {
+        private FakeHoliday _target;
+        
         [SetUp]
         public void Setup()
         {
+            _target = new FakeHoliday();
         }
         
         
         [Test]
         public void Today_Is_Not_Xmas()
         {
-            var holiday = new FakeHoliday();
-            holiday.SetToday(new DateTime(2020, 5, 8));
-            var result = holiday.GetXmasValue();
-            Assert.AreEqual("Today is not Xmas", result);
+            GivenToday(2020, 5, 8);
+            ShouldBeValid("Today is not Xmas");
         }
 
 
         [Test]
         public void Today_Is_Xmas()
         {
-            var holiday = new FakeHoliday();
-            holiday.SetToday(new DateTime(2020, 12,25));
-            var result = holiday.GetXmasValue();
-            Assert.AreEqual("Xmas", result);
+            GivenToday(2020, 12, 25);
+            ShouldBeValid("Xmas");
         }
         
         [Test]
         public void Today_1224_Is_Xmas()
         {
-            var holiday = new FakeHoliday();
-            holiday.SetToday(new DateTime(2020, 12,24));
-            var result = holiday.GetXmasValue();
-            Assert.AreEqual("Xmas", result);
+            GivenToday(2020, 12, 24);
+            ShouldBeValid("Xmas");
+        }
+
+        private void ShouldBeValid(string expected)
+        {
+            Assert.AreEqual(expected, _target.GetXmasValue());
+        }
+
+        private void GivenToday(int year, int month, int day)
+        {
+            _target.SetToday(new DateTime(year, month, day));
         }
     }
     
