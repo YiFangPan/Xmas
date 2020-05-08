@@ -27,7 +27,7 @@ Maybe you need to think more...
 
 ### Practice - Part 2
 
-#### Write your legacy code and add unit test to verify user requirement
+#### Write your legacy code for meet **Think - Part 1** user requirement and add unit test to verify user requirement
   
 #### Restriction
   1. Create Public Method
@@ -52,7 +52,7 @@ Maybe you need to think more...
 
 ### Practice - Part 3
 
-#### Modify your code for meet user requirement and add unit test to verify user requirement
+#### Modify your code for meet **Think - Part 2** user requirement and add unit test to verify user requirement
   
 #### Restriction
   * No Public
