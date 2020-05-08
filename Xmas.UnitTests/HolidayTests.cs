@@ -9,58 +9,49 @@ namespace Xmas.UnitTests
         public void Setup()
         {
         }
-
+        
+        
         [Test]
-        public void Verify_Today_Is_Not_Xmas()
+        public void Today_Is_Not_Xmas()
         {
-            IDateTimeWrapper wrapper = new FakeDateTimeWrapper();
-            
-            var holiday = new Holiday(wrapper);
+            var holiday = new FakeHoliday();
+            holiday.SetToday(new DateTime(2020, 5, 8));
             var result = holiday.GetXmasValue();
             Assert.AreEqual("Today is not Xmas", result);
         }
 
-        private class FakeDateTimeWrapper : IDateTimeWrapper
-        {
-            public DateTime GetNow()
-            {
-                return new DateTime(2020, 12, 1);
-            }
-        }
 
-        
         [Test]
-        public void Verify_Today_Is_Xmas()
+        public void Today_Is_Xmas()
         {
-            IDateTimeWrapper wrapper = new FakeXmasDateTimeWrapper();
-            var holiday = new Holiday(wrapper);
+            var holiday = new FakeHoliday();
+            holiday.SetToday(new DateTime(2020, 12,25));
             var result = holiday.GetXmasValue();
             Assert.AreEqual("Xmas", result);
         }
         
-        private class FakeXmasDateTimeWrapper : IDateTimeWrapper
-        {
-            public DateTime GetNow()
-            {
-                return new DateTime(2020, 12, 25);
-            }
-        }
-        
         [Test]
-        public void Verify_Today_1224_Is_Xmas()
+        public void Today_1224_Is_Xmas()
         {
-            IDateTimeWrapper wrapper = new FakeXmas1224DateTimeWrapper();
-            var holiday = new Holiday1224(wrapper);
+            var holiday = new FakeHoliday();
+            holiday.SetToday(new DateTime(2020, 12,24));
             var result = holiday.GetXmasValue();
             Assert.AreEqual("Xmas", result);
         }
-        
-        private class FakeXmas1224DateTimeWrapper : IDateTimeWrapper
+    }
+    
+    public class FakeHoliday : Holiday
+    {
+        private DateTime _today;
+
+        public void SetToday(DateTime dateTime)
         {
-            public DateTime GetNow()
-            {
-                return new DateTime(2020, 12, 24);
-            }
+            _today = dateTime;
+        }
+        
+        protected override DateTime GetToday()
+        {
+            return _today;
         }
     }
 }
