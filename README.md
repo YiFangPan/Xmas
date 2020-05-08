@@ -36,7 +36,7 @@ Maybe you need to think more...
 ### Think - Part 2
 
 Maybe you need to think more...
- * How could you make sure user konw 12/25 is Xmas?
+ * How could you make sure user know 12/25 is Xmas?
  * Did you give some example when you dicuss with user?
  * If both 12/24 and 12/25 are Xmas, what do you need to modify?
   
