@@ -38,9 +38,10 @@ Maybe you need to think more...
 Maybe you need to think more...
  * How could you make sure user konw 12/25 is Xmas?
  * Did you give some example when you dicuss with user?
+ * If both 12/24 and 12/25 are Xmas, what do you need to modify?
   
 #### Change User Requirement 
-  * I want to verify Xmas day is 12/24
+  * Both 12/24 and 12/25 are Xmas
   * Tell me today is Xmas or isn't Xmas
   * If today is Xmas, I want to see "Xmas"
   * If today isn't Xmas, I want to see "Today is not Xmas"
